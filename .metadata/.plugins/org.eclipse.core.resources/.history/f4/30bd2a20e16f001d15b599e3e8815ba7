@@ -1,0 +1,22 @@
+package RandomXoSo;
+
+import java.util.concurrent.ThreadLocalRandom;
+
+public class Client {
+	public static void main(String[] args) {
+		var random1 = usingThreadLocalClass();
+		var random2 = usingThreadLocalClass();
+		var random3 = usingThreadLocalClass();
+		var random4 = usingThreadLocalClass();
+		var random5 = usingThreadLocalClass();
+		var random6 = usingThreadLocalClass();
+		System.out.println("Giai dac biet hom nay: " 
+		+ random1 + random2 + random3 + random4 + random5 + random6);
+	}
+
+	private static int usingThreadLocalClass() {
+		int ranNum = ThreadLocalRandom.current().nextInt(0, 9);
+		return ranNum;
+	}
+
+}

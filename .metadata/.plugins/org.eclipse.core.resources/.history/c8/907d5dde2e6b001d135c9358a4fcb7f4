@@ -1,0 +1,5 @@
+package bh10;
+
+public class timKiem extends Thread {
+
+}

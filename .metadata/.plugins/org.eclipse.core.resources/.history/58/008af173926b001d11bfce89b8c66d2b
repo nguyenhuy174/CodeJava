@@ -1,0 +1,20 @@
+package NguyenNgocHuy;
+
+import java.util.ArrayList;
+
+public class ThuVien extends ArrayList<Book> implements IBook {
+
+	@Override
+	public void hienThi() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void xoa() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}

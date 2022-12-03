@@ -1,0 +1,8 @@
+package NguyenNgocHuy;
+
+public interface IBook {
+	
+	public void hienThi();
+	
+	public void xoa();
+}

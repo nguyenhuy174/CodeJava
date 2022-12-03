@@ -1,0 +1,63 @@
+package NguyenNgocHuy;
+
+import java.util.ArrayList;
+
+public class ThuVien extends ArrayList<Book> implements IBook {
+
+	@Override
+	public void hienThi() {
+		if (this.size() == 0) {
+			System.out.println("Danh sach rong!");
+		} else {
+			for (var s : this)
+				System.out.println(s);
+		}
+	}
+
+	@Override
+	public void xoa() {
+		this.clear();
+	}
+
+	@Override
+	public void xoa(int ma) {
+		this.remove(this.tim(ma));
+	}
+
+	@Override
+	public void them(Book book, int soLuong) {
+		var kq = this.tim(book.getId());
+		if (kq == null) {
+			book.setSoLuong(soLuong);
+			this.add(book);
+		} else {
+			kq.setSoLuong(kq.getSoLuong() + soLuong);
+		}
+	}
+
+	public Book tim(int ma) {
+		for (var s : this) {
+			if (ma == s.getId())
+				return s;
+		}
+		return null;
+	}
+
+	public Book timTheoTen(String ten) {
+		for (var s : this) {
+			if (ten == s.getName())
+				return s;
+		}
+		return null;
+	}
+
+	@Override
+	public Book tim(String ten) {
+		for (var s : this) {
+			if (ten == s.getName())
+				return s;
+		}
+		return null;	
+	}
+
+}

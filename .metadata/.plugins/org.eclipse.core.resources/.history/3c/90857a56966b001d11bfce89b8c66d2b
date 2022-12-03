@@ -1,0 +1,15 @@
+package NguyenNgocHuy;
+
+public class Client {
+	public static void main(String[] args) {
+		IBook IB = new ThuVien();
+		Book b1 = new Book(1, "Doraemon", "Fujiko", 24);
+		Book b2 = new Book(2, "Conan", "Aoyama", 25);
+		IB.them(b1, 3);
+		IB.them(b2, 2);
+		IB.hienThi();
+		IB.xoa(1);
+		System.out.println("---Sau khi xoa---");
+		IB.hienThi();
+	}
+}

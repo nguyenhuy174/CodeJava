@@ -1,0 +1,14 @@
+package NguyenNgocHuy;
+
+public interface IBook {
+	
+	public void them(Book book, int soLuong);
+
+	public void hienThi();
+	
+	public void tim(Book book, String ten);
+
+	public void xoa(int ma);
+
+	public void xoa();
+}

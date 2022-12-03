@@ -1,0 +1,28 @@
+package NguyenNgocHuy;
+
+import java.util.ArrayList;
+
+public class ThuVien extends ArrayList<Book> implements IBook {
+
+	@Override
+	public void hienThi() {
+		if (this.size() == 0) {
+			System.out.println("Danh sach rong!");
+		} else {
+			for (var s : this)
+				System.out.println(s);
+		}
+	}
+
+	@Override
+	public void xoa() {
+		
+	}
+
+	@Override
+	public void xoa(int ma) {
+		
+	}
+	
+
+}
